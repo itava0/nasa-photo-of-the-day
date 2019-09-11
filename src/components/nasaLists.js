@@ -8,7 +8,7 @@ function NasaLists() {
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-08-${day}`
+        `https://api.nasa.gov/planetary/apod?api_key=I6nFbdeH3wC8aTAbvb6NGroh51cHrLYyENKzoEHh&date=2019-08-${day}`
       )
       .then(res => {
         console.log(res.data);
@@ -31,13 +31,7 @@ function NasaLists() {
         copyright={nasa.copyright}
       />
       <div>
-        <button
-          onClick={() =>
-            setDate(() => {
-              Math.floor(Math.random() * 30);
-            })
-          }
-        >
+        <button onClick={() => setDate(Math.floor(Math.random() * 30))}>
           Click For Random
         </button>
       </div>
