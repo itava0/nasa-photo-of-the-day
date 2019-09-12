@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NasaCards from "./nasaCards";
 import axios from "axios";
+import { Button } from "reactstrap";
 
 function NasaLists() {
   const [nasa, setNasa] = useState([]);
@@ -22,6 +23,9 @@ function NasaLists() {
   }, [day]);
   return (
     <div>
+      <Button C onClick={() => setDate(Math.floor(Math.random() * 30))}>
+        Click For Random
+      </Button>
       <NasaCards
         key={nasa.id}
         title={nasa.title}
@@ -30,11 +34,6 @@ function NasaLists() {
         date={nasa.date}
         copyright={nasa.copyright}
       />
-      <div>
-        <button onClick={() => setDate(Math.floor(Math.random() * 30))}>
-          Click For Random
-        </button>
-      </div>
     </div>
   );
 }

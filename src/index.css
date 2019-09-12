@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card-deck {
+  max-width: 400px;
+  margin: 0 auto !important;
+}
